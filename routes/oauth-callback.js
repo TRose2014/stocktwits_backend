@@ -5,11 +5,10 @@ require('dotenv').config();
 
 router.get('/', (req, res) => {
 	console.log('Hello from oauth-calback');
-	res.json({
-		message: 'Incoming message from oauth-callback route',
-		req: req,
-		res: res
-	}).json();
+	console.log('oauth req', req);
+	res.send({
+		message: 'Incoming message from oauth-callback route'
+	});
 });
 
 // router.get('/', (req, res) => {
