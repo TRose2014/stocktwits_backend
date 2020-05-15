@@ -2,20 +2,6 @@ const express = require('express');
 const router = express.Router();
 const request = require('request');
 require('dotenv').config();
-const cors = require('cors');
-
-const app = express();
-app.use(express.json());
-
-
-// configure CORS
-app.use(cors(
-	{
-		origin: true,
-		credentials: true,
-    
-	})
-);
 
 router.get('/', (req, res) => {
 	console.log('Inside oauth-callback');
