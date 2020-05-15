@@ -24,9 +24,8 @@ app.use(session(
 // configure CORS
 app.use(cors(
 	{
-		origin: '*',
+		origin: true,
 		credentials: true,
-		optionsSuccessStatus: 200,
     
 	})
 );
