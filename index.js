@@ -37,4 +37,4 @@ app.use('/logout', require('./routes/logout'));
 // app.use('/set-user-data', require('./routes/set-user-data'));
 
 // start server
-app.listen(process.env.server_port, () => console.log(`Stockwits example app listening on port ${process.env.server_port}.`));
+app.listen(process.env.PORT, () => console.log(`Stockwits example app listening on port ${process.env.PORT}.`));

@@ -3,8 +3,6 @@ const router = express.Router();
 const request = require('request');
 require('dotenv').config();
 
-console.log('Hello!! WTF');
-
 router.get('/', (req, res) => {
 	console.log('Inside oauth-callback');
 	console.log('req', req.query);
