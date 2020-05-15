@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 			(error, response, body) => {
 				console.log('body', body);
 				// save token to session
-				res.send(JSON.parse(body));
+				// res.send(JSON.parse(body));
 				req.session.token = JSON.parse(body).access_token;
 
 				// redirect to the React app
