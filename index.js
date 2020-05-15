@@ -24,8 +24,10 @@ app.use(session(
 // configure CORS
 app.use(cors(
 	{
-		origin: true,
-		credentials: true
+		origin: '*',
+		credentials: true,
+		optionsSuccessStatus: 200,
+    
 	})
 );
 //cors
