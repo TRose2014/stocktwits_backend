@@ -3,11 +3,11 @@ const router = express.Router();
 const request = require('request');
 
 router.get('/', (req, res) => {
-	// res.send({
-	//   user: {
-	//     email: 'shortyshort789@aol.com'
-	//   }
-	// });
+	res.render({
+		user: {
+			email: 'shortyshort789@aol.com'
+		}
+	});
 
 	console.log('req2', req.session);
 
