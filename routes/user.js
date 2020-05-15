@@ -3,6 +3,10 @@ const router = express.Router();
 const request = require('request');
 
 router.get('/', (req, res) => {
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Allow-Methods', '*');
+	res.setHeader('Access-Control-Allow-Headers', '*');
+	res.setHeader('Access-Control-Allow-Credentials', true);
 	// res.send({
 	// 	user: {
 	// 		email: 'shortyshort789@aol.com'
