@@ -18,11 +18,11 @@ router.get('/', (req, res) => {
 			console.log('body2', body);
 			// save token to session
 			req.session.token = JSON.parse(body).access_token;
-			res.send(body.results);
+			// res.send({res:body.results});
 			// req.session.body = body.results;
 
 			// redirect to the React app
-			// res.redirect('https://infallible-booth-e191ee.netlify.app');
+			res.redirect('https://infallible-booth-e191ee.netlify.app');
 		}
 	);
 });
