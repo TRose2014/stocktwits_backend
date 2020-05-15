@@ -22,13 +22,13 @@ app.use(session(
 );
 
 // configure CORS
-app.use(cors(
-	{
-		origin: true,
-		credentials: true,
+// app.use(cors(
+// 	{
+// 		origin: true,
+// 		credentials: true,
     
-	})
-);
+// 	})
+// );
 //cors
 app.use(function(req, res, next) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
