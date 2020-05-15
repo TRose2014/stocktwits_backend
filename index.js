@@ -22,7 +22,13 @@ app.use(session(
 );
 
 // configure CORS
-app.use(cors());
+app.use(cors(
+	{
+		origin: '*',
+		optionsSuccessStatus: 200,
+    
+	})
+);
 //cors
 // app.use(function(req, res, next) {
 // 	res.header('Access-Control-Allow-Origin', '*');
