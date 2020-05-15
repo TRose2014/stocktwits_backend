@@ -3,41 +3,37 @@ const router = express.Router();
 const request = require('request');
 
 router.get('/', (req, res) => {
-	res.send({message: 'Hello, Where are you?'});
+	// res.send({
+	// 	user: {
+	// 		email: 'shortyshort789@aol.com'
+	// 	}
+	// });
+
+	console.log('req2', req.session);
+
+	// if(req.session.token) {
+	request(
+		{
+			method: 'GET',
+			uri: `https://api.stocktwits.com/api/2/search/symbols.json?access_token=${req.session.token}&q=AAPL`
+			// uri: `https://api.stocktwits.com/api/2/search/symbols.json?access_token=e37d264e1c1edd7273295f98452edd5e00e4e2a8&q=AAPL`
+		},
+		// callback
+		(error, response, body) => {
+			console.log('body', body);
+			// save token to session
+			res.send(JSON.parse(body));
+			// req.session.token = JSON.parse(body).access_token;
+
+			// // redirect to the React app
+			// res.redirect(`http://localhost:${config.clientPort}`);
+		}
+
+	);
+	// }else{
+	// res.send('There was an issue');
 });
-
-// router.get('/', (req, res) => {
-// 	// res.send({
-// 	// 	user: {
-// 	// 		email: 'shortyshort789@aol.com'
-// 	// 	}
-// 	// });
-
-// 	console.log('req2', req.session);
-
-// 	// if(req.session.token) {
-// 	request(
-// 		{
-// 			method: 'GET',
-// 			uri: `https://api.stocktwits.com/api/2/search/symbols.json?access_token=${req.session.token}&q=AAPL`
-// 			// uri: `https://api.stocktwits.com/api/2/search/symbols.json?access_token=e37d264e1c1edd7273295f98452edd5e00e4e2a8&q=AAPL`
-// 		},
-// 		// callback
-// 		(error, response, body) => {
-// 			console.log('body', body);
-// 			// save token to session
-// 			res.send(JSON.parse(body));
-// 			// req.session.token = JSON.parse(body).access_token;
-
-// 			// // redirect to the React app
-// 			// res.redirect(`http://localhost:${config.clientPort}`);
-// 		}
-
-// 	);
-// 	// }else{
-// 	// res.send('There was an issue');
 // });
-// // });
 
 // router.get('/', (req, res) => {
 //   // token in session -> get user data and send it back to the react app
