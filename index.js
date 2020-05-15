@@ -9,24 +9,24 @@ app.use(express.json());
 
 // configure sessions
 app.use(session(
-  {
-    secret: '1234567890',
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-      secure: 'auto',
-      httpOnly: true,
-      maxAge: 3600000
-    }
-  })
+	{
+		secret: '1234567890',
+		resave: false,
+		saveUninitialized: false,
+		cookie: {
+			secure: 'auto',
+			httpOnly: true,
+			maxAge: 3600000
+		}
+	})
 );
 
 // configure CORS
 app.use(cors(
-  {
-    origin: true,
-    credentials: true
-  })
+	{
+		origin: true,
+		credentials: true
+	})
 );
 
 // use routes
