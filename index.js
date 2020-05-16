@@ -45,8 +45,7 @@ app.use(session(
 // configure CORS
 app.use(cors(
 	{
-		origin: 'https://infallible-booth-e191ee.netlify.app',
-		credentials: true,
+		origin: 'https://infallible-booth-e191ee.netlify.app'
     
 	})
 );
