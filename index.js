@@ -71,7 +71,10 @@ app.options('/user', cors({
 }));
 
 // use routes
-app.use('/user', cors(), require('./routes/user'));
+app.use('/user', cors({
+	origin: 'https://infallible-booth-e191ee.netlify.app',
+	credentials: true,
+}), require('./routes/user'));
 app.use('/login', require('./routes/login'));
 app.use('/oauth-callback', require('./routes/oauth-callback'));
 app.use('/logout', require('./routes/logout'));
