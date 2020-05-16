@@ -23,6 +23,8 @@ router.get('/', (req, res) => {
 				'content-length': '100',
 				'body': body,
 			});
+			response.writeHead(200, {'Content-Type': 'application/json'});
+			res.write(body);
 
 			// console.log('res', res);
 			// res.body = body.results;
