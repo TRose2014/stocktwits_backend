@@ -19,7 +19,12 @@ router.get('/', (req, res) => {
 			req.session.token = JSON.parse(body).access_token;
 			// res.send({res:body.results});
 			// res.body = body.results;
-			res.setHeader('body', body.results);
+			res.set({
+				'content-type': 'application/json',
+				'content-length': '100',
+				'body': body.results,
+			});
+
 			console.log('res', res.body);
 
 			// redirect to the React app
