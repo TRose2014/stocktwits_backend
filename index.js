@@ -68,9 +68,9 @@ app.use(cors(
 app.options('/user', cors());
 
 // use routes
-app.use('/user', require('./routes/user'));
-app.use('/login', require('./routes/login'));
-app.use('/oauth-callback', require('./routes/oauth-callback'));
+app.use('/user', cors(), require('./routes/user'));
+app.use('/login', cors(), require('./routes/login'));
+app.use('/oauth-callback', cors(), require('./routes/oauth-callback'));
 app.use('/logout', require('./routes/logout'));
 // app.use('/set-user-data', require('./routes/set-user-data'));
 
