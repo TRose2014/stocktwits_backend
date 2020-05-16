@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
 			console.log('res', res);
 
 			// redirect to the React app
-			res.redirect('https://infallible-booth-e191ee.netlify.app');
+			res.redirect('https://infallible-booth-e191ee.netlify.app/');
 		}
 	);
 });
