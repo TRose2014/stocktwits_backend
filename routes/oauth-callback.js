@@ -18,18 +18,16 @@ router.get('/', (req, res) => {
 			// save token to session
 			req.session.token = JSON.parse(body).access_token;
 			// res.send({res:body.results});
-			res.set({
-				'content-type': 'application/json',
-				'content-length': '100',
-				'body': body,
-			});
-			res.writeHead(200, {'Content-Type': 'application/json'});
-			res.write(body);
+			// res.set({
+			// 	'content-type': 'application/json',
+			// 	'content-length': '100',
+			// 	'body': body,
+			// });
 
 			// console.log('res', res);
 			// res.body = body.results;
 			// console.log('res', res.body);
-			// res.send(body);
+			res.send(body);
 
 			// redirect to the React app
 			// res.redirect('http://localhost:3000/');
