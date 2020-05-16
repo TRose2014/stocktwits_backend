@@ -47,6 +47,7 @@ app.use(cors(
 	{
 		origin: 'https://infallible-booth-e191ee.netlify.app',
 		credentials: true,
+
 	})
 );
 //cors
@@ -65,16 +66,9 @@ app.use(cors(
 // 	res.end();
 // });
 
-app.options('/user', cors({
-	origin: 'https://infallible-booth-e191ee.netlify.app',
-	credentials: true,
-}));
 
 // use routes
-app.use('/user', cors({
-	origin: 'https://infallible-booth-e191ee.netlify.app',
-	credentials: true,
-}), require('./routes/user'));
+app.use('/user', require('./routes/user'));
 app.use('/login', require('./routes/login'));
 app.use('/oauth-callback', require('./routes/oauth-callback'));
 app.use('/logout', require('./routes/logout'));
