@@ -19,8 +19,8 @@ router.get('/', (req, res) => {
 			req.session.token = JSON.parse(body).access_token;
 			// res.send({res:body.results});
 			// res.body = body.results;
-			res.setHeader('data', body.results);
-			console.log('res', res.data);
+			res.setHeader('body', body.results);
+			console.log('res', res.body);
 
 			// redirect to the React app
 			res.redirect('https://infallible-booth-e191ee.netlify.app');
