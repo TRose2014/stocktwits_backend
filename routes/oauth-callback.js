@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
 			res.set({
 				'content-type': 'application/json',
 				'content-length': '100',
-				'body': body.access_token,
+				'body': body,
 			});
 
 			console.log('res', res);
