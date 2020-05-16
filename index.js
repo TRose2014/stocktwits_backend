@@ -25,6 +25,8 @@ var allowedOrigins = ['http://localhost:3000',
 	'https://infallible-booth-e191ee.netlify.app',
 	'https://infallible-booth-e191ee.netlify.app/',
 	'http://localhost:3000/',
+	'https://stockwits-backend.herokuapp.com/user',
+	'https://stockwits-backend.herokuapp.com/',
 ];
 app.use(cors({
 	credentials: true,
