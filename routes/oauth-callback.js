@@ -18,17 +18,18 @@ router.get('/', (req, res) => {
 			// save token to session
 			req.session.token = JSON.parse(body).access_token;
 			// res.send({res:body.results});
-			// res.body = body.results;
-			res.set({
-				'content-type': 'application/json',
-				'content-length': '100',
-				'body': body,
-			});
+			// res.set({
+			// 	'content-type': 'application/json',
+			// 	'content-length': '100',
+			// 	'body': body,
+			// });
 
-			console.log('res', res);
+			// console.log('res', res);
+			// res.body = body.results;
+			// console.log('res', res.body);
 
 			// redirect to the React app
-			res.redirect('https://infallible-booth-e191ee.netlify.app/');
+			res.redirect('https://infallible-booth-e191ee.netlify.app');
 		}
 	);
 });
