@@ -65,6 +65,7 @@ app.use(cors(
 // 	res.end();
 // });
 
+app.options('/user', cors());
 
 // use routes
 app.use('/user', require('./routes/user'));
