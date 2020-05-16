@@ -24,7 +24,6 @@ app.use(session(
 var allowedOrigins = ['http://localhost:3000',
 	'https://infallible-booth-e191ee.netlify.app',
 	'https://infallible-booth-e191ee.netlify.app/',
-	'https://infallible-booth-e191ee.netlify.app/user',
 	'http://localhost:3000/',
 ];
 app.use(cors({
