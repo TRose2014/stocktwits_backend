@@ -27,10 +27,10 @@ router.get('/', (req, res) => {
 			// console.log('res', res);
 			// res.body = body.results;
 			// console.log('res', res.body);
-			res.send(body);
+			// res.send(body);
 
 			// redirect to the React app
-			// res.redirect('http://localhost:3000/');
+			res.redirect(`http://localhost:3000/#<${req.session.token}`);
 		}
 	);
 });
