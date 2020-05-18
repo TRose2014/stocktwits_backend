@@ -27,7 +27,8 @@ router.get('/', (req, res) => {
 				req.session.data = body.results;
 
 				// redirect to the React app
-				res.redirect('https://infallible-booth-e191ee.netlify.app/');
+				// res.redirect('https://infallible-booth-e191ee.netlify.app/');
+				res.redirect('http://localhost:3000/');
 			}
 
 		);
