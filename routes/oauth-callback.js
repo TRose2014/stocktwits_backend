@@ -4,8 +4,6 @@ const request = require('request');
 require('dotenv').config();
 
 router.get('/', (req, res) => {
-	console.log('Inside oauth-callback');
-	console.log('req-query', req.query);
 	request(
 		{
 			method: 'POST',
@@ -14,13 +12,11 @@ router.get('/', (req, res) => {
 
 		// callback
 		(error, response, body) => {
-			console.log('body2', body);
 			// save token to session
 			req.session.token = JSON.parse(body).access_token;
 
 			// redirect to the React app
-			// res.redirect(`https://infallible-booth-e191ee.netlify.app/#${req.session.token}`);
-			res.redirect(`http://localhost:3000/#${req.session.token}`);
+			res.redirect(`https://infallible-booth-e191ee.netlify.app/#${req.session.token}`);
 		}
 	);
 });
