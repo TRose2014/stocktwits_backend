@@ -17,21 +17,9 @@ router.get('/', (req, res) => {
 			console.log('body2', body);
 			// save token to session
 			req.session.token = JSON.parse(body).access_token;
-			// res.send({res:body.results});
-			// res.set({
-			// 	'content-type': 'application/json',
-			// 	'content-length': '100',
-			// 	'body': body,
-			// });
-
-			// console.log('res', res);
-			// res.body = body.results;
-			// console.log('res', res.body);
-			// res.send(body);
 
 			// redirect to the React app
-			// res.redirect(`https://infallible-booth-e191ee.netlify.app/#${req.session.token}`);
-			res.redirect(`http://localhost:3000/#${req.session.token}`);
+			res.redirect(`https://infallible-booth-e191ee.netlify.app/#${req.session.token}`);
 		}
 	);
 });
