@@ -16,7 +16,8 @@ router.get('/', (req, res) => {
 			req.session.token = JSON.parse(body).access_token;
 
 			// redirect to the React app
-			res.redirect(`https://infallible-booth-e191ee.netlify.app/#${req.session.token}`);
+			// res.redirect(`https://infallible-booth-e191ee.netlify.app/#${req.session.token}`);
+			res.redirect(`http://localhost:3000/#${req.session.token}`);
 		}
 	);
 });
