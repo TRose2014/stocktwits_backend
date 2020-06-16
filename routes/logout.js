@@ -5,7 +5,7 @@ router.get('/', (req, res) => {
 	// delete the session
 	req.session.destroy();
 
-	// end FusionAuth session
+	// end session
 	res.send('You have been logged out');
 });
 
